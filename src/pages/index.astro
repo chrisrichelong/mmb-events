@@ -5,11 +5,17 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="PRC Awards 2020 Winner Event Organizer">
   <main>
     <section class="hero">
+      <a href="/" class="hero-logo">
+  <img
+    src="/images/logo/mmb-logo.png"
+    alt="MMB Events"
+  />
+</a>
       <div class="container">
         <p class="eyebrow">PRC Awards 2020 Winner Event Organizer</p>
         <h1>The Vision Behind Flawless Corporate Events</h1>
         <p class="lead">
-          Award-winning event management, production, AVPs, and technical equipment rental for organizations in the Philippines
+          Award-winning event management, production, AVPs, and technical equipment rental for organizations across the Philippines by MMB Events Founder Marjorie "Gigi" Buenaventura
         </p>
         <a href="#contact" class="button">Let's Plan Your Event</a>
       </div>
@@ -272,7 +278,7 @@ import Layout from "../layouts/Layout.astro";
       <h2>Recognized as Event Organizer of the Year</h2>
 
       <p>
-        For the last 30 years, GIGI has been engaged in promotions,
+        For the last 30 years, Marjorie "Gigi" Buenaventura of MMB Events has been engaged in promotions,
         development communications, and mass media enterprises, with
         special emphasis in the production of hundreds of audio-visual
         support materials (AVP) and event management projects.
@@ -361,6 +367,7 @@ import Layout from "../layouts/Layout.astro";
         <p class="eyebrow">Contact Us</p>
         <h2>"DETAIL IS NOT JUST A PRIORITY—IT IS AN OBSESSION."</h2>
         <p>At MMB Events, every celebration is more than an event—it is an experience thoughtfully designed, professionally managed, and passionately delivered. We are dedicated to turning your vision into unforgettable moments that leave lasting impressions.</p>
+        <br>MMB Events
         <br><p>Email: <a href="mailto:contact@mmb-events.com">contact@mmb-events.com</a></p>
         <p>Phone: <a href="tel:+639171008460">+63 917 100 8460</a></p>
         <p>Address: Concepcion Uno, Marikina City</p>
@@ -390,14 +397,45 @@ import Layout from "../layouts/Layout.astro";
   padding: 90px 0;
 }
 
-  .eyebrow {
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-weight: 700;
-    margin-bottom: 16px;
-    font-size: 0.85rem;
-  }
+.hero-logo {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  left: auto;
+  z-index: 20;
+
+  background: rgba(255,255,255,.95);
+
+  padding: 10px 34px;
+
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+.hero-logo img {
+  width: 105px;
+  height: auto;
+  display: block;
+}
+
+.hero .container {
+  padding-top: 50px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+}
+
+.hero .eyebrow {
+  text-shadow:
+    0 2px 8px rgba(0,0,0,.75),
+    0 1px 2px rgba(0,0,0,.9);
+}
 
   .eyebrow.dark {
     color: var(--maroon);
@@ -410,7 +448,7 @@ import Layout from "../layouts/Layout.astro";
     letter-spacing: -0.05em;
     margin-bottom: 28px;
   }
-
+.hero-logo
   h2 {
     color: var(--navy);
     font-size: clamp(2rem, 4vw, 3.5rem);
@@ -526,12 +564,6 @@ article p {
     color: var(--white);
   }
 
-  .projects {
-    margin-top: 20px;
-    color: var(--gold);
-    font-weight: 700;
-  }
-
   .contact {
     background: var(--maroon);
     color: var(--white);
@@ -627,6 +659,19 @@ article p {
     }
     .team-grid {
   grid-template-columns: 1fr;
+}
+
+.hero-logo {
+  top: 16px;
+  right: 16px;
+  left: auto;
+
+  padding: 8px 14px;
+  border-radius: 12px;
+}
+
+.hero-logo img {
+  width: 90px;
 }
 
     .hero {
