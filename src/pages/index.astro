@@ -2,32 +2,36 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="PRC Awards 2020 Winner Event Organizer">
+<Layout title="PRC Awards 2020 Event Organizer Winner">
   <main>
     <section class="hero">
-      <a href="/" class="hero-logo">
-  <img
-    src="/images/logo/mmb-logo.png"
-    alt="MMB Events"
-  />
-</a>
       <div class="container">
-        <p class="eyebrow">PRC Awards 2020 Winner Event Organizer</p>
+        <p class="eyebrow">MMB EVENTS | PRC Awards 2020 Event Organizer Winner</p>
         <h1>The Vision Behind Flawless Corporate Events</h1>
         <p class="lead">
-          Award-winning event management, production, AVPs, and technical equipment rental for organizations across the Philippines by MMB Events Founder Marjorie "Gigi" Buenaventura
+          Award-winning event management, production, AVPs, and technical equipment rental for organizations across the Philippines by MMB Events Founder Marjorie "Gigi" M. Buenaventura
         </p>
         <a href="#contact" class="button">Let's Plan Your Event</a>
       </div>
     </section>
 
-    <section class="stats">
-      <div class="container stat-grid">
-        <div><strong>30+</strong><span>Years of Experience</span></div>
-        <div><strong>100+</strong><span>Productions</span></div>
-        <div><strong>200+</strong><span>Audio-Visual Presentations</span></div>
-      </div>
-    </section>
+   <section class="stats">
+  <div class="container stats-wrapper">
+
+    <img
+      src="/images/logo/mmb-logo.png"
+      alt="MMB Events"
+      class="stats-logo"
+    />
+
+    <div class="stat-grid">
+      <div><strong>30+</strong><span>Years of Experience</span></div>
+      <div><strong>100+</strong><span>Productions</span></div>
+      <div><strong>200+</strong><span>Audio-Visual Presentations</span></div>
+    </div>
+
+  </div>
+</section>
 
   <section class="section">
   <div class="container about-grid">
@@ -278,7 +282,7 @@ import Layout from "../layouts/Layout.astro";
       <h2>Recognized as Event Organizer of the Year</h2>
 
       <p>
-        For the last 30 years, Marjorie "Gigi" Buenaventura of MMB Events has been engaged in promotions,
+        For the last 30 years, Marjorie "Gigi" M. Buenaventura of MMB Events has been engaged in promotions,
         development communications, and mass media enterprises, with
         special emphasis in the production of hundreds of audio-visual
         support materials (AVP) and event management projects.
@@ -369,7 +373,7 @@ import Layout from "../layouts/Layout.astro";
         <p>At MMB Events, every celebration is more than an event—it is an experience thoughtfully designed, professionally managed, and passionately delivered. We are dedicated to turning your vision into unforgettable moments that leave lasting impressions.</p>
         <br>MMB Events
         <br><p>Email: <a href="mailto:contact@mmb-events.com">contact@mmb-events.com</a></p>
-        <p>Phone: <a href="tel:+639171008460">+63 917 100 8460</a></p>
+        <p>Phone: <a href="tel:+639171008460">+63 917 179 1060</a></p>
         <p>Address: Concepcion Uno, Marikina City</p>
       </div>
     </section>
@@ -395,27 +399,6 @@ import Layout from "../layouts/Layout.astro";
 
   color: var(--white);
   padding: 90px 0;
-}
-
-.hero-logo {
-  position: absolute;
-  top: 24px;
-  right: 32px;
-  left: auto;
-  z-index: 20;
-
-  background: rgba(255,255,255,.95);
-
-  padding: 10px 34px;
-
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.18);
-}
-
-.hero-logo img {
-  width: 105px;
-  height: auto;
-  display: block;
 }
 
 .hero .container {
@@ -448,13 +431,13 @@ import Layout from "../layouts/Layout.astro";
     letter-spacing: -0.05em;
     margin-bottom: 28px;
   }
-.hero-logo
+
   h2 {
-    color: var(--navy);
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    line-height: 1;
-    margin-bottom: 24px;
-  }
+  color: var(--navy);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1;
+  margin-bottom: 24px;
+}
 
   h3 {
     color: var(--maroon);
@@ -502,9 +485,9 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .stats {
-    background: var(--gold);
+    background: var(--navy);
     color: var(--white);
-    padding: 34px 0;
+    padding: 20px 0;
   }
 
   .stat-grid {
@@ -517,11 +500,35 @@ import Layout from "../layouts/Layout.astro";
     display: block;
     font-size: 3rem;
     line-height: 1;
+    color: var(--white);
   }
 
   .stat-grid span {
     font-weight: 700;
+    color: var(--white);
   }
+
+  .stats-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.stats-logo {
+  width: 180px;
+  height: auto;
+  opacity: .80;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.25));
+}
+
+.stat-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
 
   .service-grid {
     display: grid;
@@ -652,34 +659,6 @@ article p {
   }
 }
 
-  @media (max-width: 800px) {
-    .stat-grid,
-    .service-grid {
-      grid-template-columns: 1fr;
-    }
-    .team-grid {
-  grid-template-columns: 1fr;
-}
-
-.hero-logo {
-  top: 16px;
-  right: 16px;
-  left: auto;
-
-  padding: 8px 14px;
-  border-radius: 12px;
-}
-
-.hero-logo img {
-  width: 90px;
-}
-
-    .hero {
-      min-height: auto;
-      padding: 90px 0;
-    }
-  }
-
   .about-grid {
   display: grid;
   grid-template-columns: 1.3fr 420px;
@@ -779,14 +758,6 @@ article p {
   max-width: 600px;
 }
 
-@media (max-width: 900px) {
-
-  .values-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
-
 .values h2 {
   font-size: clamp(1.9rem, 3.5vw, 2.8rem);
   margin-bottom: 16px;
@@ -808,6 +779,138 @@ article p {
   display: block;
   border-radius: 20px;
   box-shadow: 0 18px 40px rgba(0,0,0,.12);
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: auto;
+    padding: 80px 0;
+    text-align: left;
+  }
+
+  .hero .container {
+    padding-top: 0;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 13vw, 4rem);
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .stats-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .stats-logo {
+    width: 130px;
+  }
+
+  .stat-grid,
+  .service-grid,
+  .about-grid,
+  .values-grid,
+  .team-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-award,
+  .values-photo,
+  .team-image {
+    order: -1;
+  }
+
+  .values-photo img {
+    height: 320px;
+  }
+
+  .logo-track img {
+    width: 120px;
+    height: 64px;
+  }
+
+  .featured-photo img {
+    border-radius: 14px;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: auto;
+    padding: 70px 0;
+  }
+
+  .hero .container {
+    padding-top: 0;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .stats-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .stats-logo {
+    width: 140px;
+  }
+
+  .stat-grid,
+  .service-grid,
+  .about-grid,
+  .values-grid,
+  .team-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-award,
+  .values-photo,
+  .team-image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .logo-track img {
+    width: 120px;
+    height: 60px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
 }
 
 </style>
