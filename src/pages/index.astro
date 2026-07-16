@@ -365,13 +365,32 @@ import Layout from "../layouts/Layout.astro";
 <section class="section featured">
   <div class="container">
 
-    <p class="eyebrow dark">Featured Event</p>
+    <p class="eyebrow dark">Featured Events</p>
 
-    <div class="featured-photo">
+    <h2>Moments We've Helped Create</h2>
+
+    <div class="featured-grid">
+
       <img
         src="/images/featured/event1.jpg"
-        alt="Corporate event by MMB Events"
+        alt="Corporate Event 1"
       />
+
+      <img
+        src="/images/featured/event2.jpg"
+        alt="Corporate Event 2"
+      />
+
+      <img
+        src="/images/featured/event3.jpg"
+        alt="Corporate Event 3"
+      />
+
+      <img
+        src="/images/featured/event4.jpg"
+        alt="Corporate Event 4"
+      />
+
     </div>
 
   </div>
@@ -780,17 +799,30 @@ article p {
   margin-bottom: 40px;
 }
 
-.featured-photo {
-  max-width: 900px;
-  margin: 0 auto;
+.featured-grid {
+  margin-top: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
-.featured-photo img {
+.featured-grid img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 340px;
+
+  object-fit: cover;
+
   border-radius: 20px;
+
   box-shadow: 0 18px 40px rgba(0,0,0,.12);
+
+  transition: .25s ease;
+}
+
+.featured-grid img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px rgba(0,0,0,.18);
 }
 
 @media (max-width: 800px) {
@@ -803,6 +835,19 @@ article p {
   .hero .container {
     padding-top: 0;
   }
+
+  .featured-grid {
+  grid-template-columns: 1fr;
+}
+
+.featured-grid img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.12);
+}
 
   h1 {
     font-size: clamp(2.4rem, 13vw, 4rem);
